@@ -11,12 +11,7 @@
 
     <title>Se feliz Ximena</title>
 
-    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-
-    
-
-    
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -60,8 +55,7 @@
             
           </div>
         </nav>
-          
-         
+  
       
           
     <div class="jumbotron">
@@ -83,7 +77,7 @@
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item active">
-          <img class="first-slide" src="img/3.jpeg" alt="First slide">
+          <img class="first-slide" src="img/3.webp" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
                <p>Que rápido se paso el tiempo desde aquella vez xd, y pensar que las palabras no pueden sustituir un abrazo</p>
@@ -91,7 +85,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="second-slide" src="img/5.png" alt="Second slide">
+          <img class="second-slide" src="img/5.webp" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <p>es duro querer y tener que felicitarte a distancia xd</p>
@@ -99,7 +93,7 @@
           </div>
         </div>
         <div class="item">
-          <img class="third-slide" src="img/4.png"  alt="Third slide">
+          <img class="third-slide" src="img/4.webp"  alt="Third slide">
           <div class="container">
             <div class="carousel-caption">
               <p>pues desde aquí te estoy felicitando :D espero que la estes pasando bonito con tu familia y las personas que te quieren aunque eso implique que falte mi presencia xD.</p>
@@ -124,36 +118,26 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="col-lg-4">
-          <img class="img-circle" src="img/1der.jpeg" title="Esta de mas decir que tienes una bonita sonrisa u.u" width="250" height="250">
+          <img class="img-circle" src="img/1der.webp" title="Esta de mas decir que tienes una bonita sonrisa u.u" width="250" height="250">
           
           <br/><br/><br/><p align="justify">Le pido a Dios y a Sheng Long que todos tus deseos se hagan realidad, porque te lo mereces. Eres una persona maravillosa, y deseo que sigas cumpliendo muchos años más; espero que algún día me alcances xd.</p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="img/5.png" title="Si sigues con los lentes muero xd" alt="Generic placeholder image" width="250" height="250">
+          <img class="img-circle" src="img/5.webp" title="Si sigues con los lentes muero xd" alt="Generic placeholder image" width="250" height="250">
           
           <br/><br/><br/><p align="justify">Al sentir que ya no salen mas palabras de mi diccionario, solo me queda comentar tu foto xd, solo wa decir que me devuelvas mis lentes dxdx.</p>
           
         </div><!-- /.col-lg-4 -->
         <div class="col-lg-4">
-          <img class="img-circle" src="img/4.png" title="Aqui parece que estas fresa xd" alt="Generic placeholder image" width="250" height="250">
+          <img class="img-circle" src="img/4.webp" title="Aqui parece que estas fresa xd" alt="Generic placeholder image" width="250" height="250">
           
           <br/><br/><br/><p align="justify">Viendo que los latidos de tu corazón frio se acelerarón, vamos a parar aquí xd, pero no sin antes decirte que no olvides de ingresar al siguiente enlace; ntp no es una clase de universidad.</p>
           
         </div><!-- /.col-lg-4 -->
       </div><!-- /.row -->
-      <div class="row">
-          <div class="col-md-4">
-              
-          </div>
-          <audio controls autoplay style="display:none">
-            <source src="/audio/Suzy-My-Dear-Love-Start-Up.mp3" type="audio/mpeg">
-          </audio>
-          <div class="col-md-4">
-              
-          </div>
-      </div>
-      
+
+    
       <!-- FOOTER -->
       <footer>
         
@@ -161,7 +145,6 @@
       </footer>
 
     </div><!-- /.container -->
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -173,5 +156,23 @@
     <script src="../../assets/js/vendor/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    
+    <script>
+
+const playSound = function() {
+    let element = document.createElement('div');
+    element.setAttribute('style', 'display: none');
+    element.innerHTML = `
+      <audio autoplay loop>
+        <source src="./audio/Suzy.mp3" type="audio/ogg">
+        <source src="./audio/Suzy.mp3" type="audio/mpeg">
+      </audio>
+    `;
+    document.body.appendChild(element);
+    document.removeEventListener('click', playSound);
+}
+
+document.addEventListener('click', playSound);
+    </script>
   </body>
 </html>
